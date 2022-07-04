@@ -1,0 +1,16 @@
+import { ICE_CREAM } from "./iceCreamType";
+
+const initialState = {
+  numOfIceCream: 20,
+};
+
+const iceCreamReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case ICE_CREAM:
+      return { ...state, numOfIceCream: state.numOfIceCream - 1 };
+    default:
+      return state;
+  }
+};
+
+export default iceCreamReducer;
